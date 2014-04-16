@@ -1,8 +1,3 @@
-//
-//  HTMLNode.m
-//
-//
-
 #import "HTMLNode.h"
 #import <libxml/HTMLtree.h>
 

@@ -1,8 +1,3 @@
-//
-//  HTMLParser.h
-//
-//
-
 #import <Foundation/Foundation.h>
 //You have to include in "Build Phases" under "Link Binary With Libraries" the libxml.dylib
 //Add ${SDK}/usr/include/libxml2 to "User Header Search Paths" for BOTH PROJECT AND TARGET
