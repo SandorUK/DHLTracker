@@ -7,13 +7,14 @@
 //
 
 #import "AppDelegate.h"
-
 #import "ViewController.h"
 
 @implementation AppDelegate
+@synthesize Parcels = _parcels;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    self.Parcels = [[NSMutableArray alloc] init];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.viewController = [[ViewController alloc] initWithNibName:@"ViewController" bundle:nil];
@@ -47,6 +48,11 @@
 - (void)applicationWillTerminate:(UIApplication *)application
 {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)parcelErrorOccured:(NSString *)message{
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"DHL Error" message:message delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil, nil];
+    [alert show];
 }
 
 @end

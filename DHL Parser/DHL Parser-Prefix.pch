@@ -3,6 +3,10 @@
 //
 
 #import <Availability.h>
+#define kDHLbaseURL @"http://www.dhl-usa.com/content/us/en/express/tracking.shtml?brand=DHL"
+#define kMIMETypeURLEncodedForm @"application/x-www-form-urlencoded\r\n"
+#define kContentType @"Content-Type"
+#define DeliveredFlag @"Delivered"
 
 #ifndef __IPHONE_4_0
 #warning "This project uses features only available in iOS SDK 4.0 and later."

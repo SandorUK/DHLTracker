@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD78C0A916E4FCF600ECEEF8 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD78C0AB16E4FCF600ECEEF8 /* Localizable.strings */; };
 		BDA9FDFF161C8CBE0084EC3E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA9FDFE161C8CBD0084EC3E /* UIKit.framework */; };
 		BDA9FE01161C8CBE0084EC3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA9FE00161C8CBE0084EC3E /* Foundation.framework */; };
 		BDA9FE03161C8CBE0084EC3E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA9FE02161C8CBE0084EC3E /* CoreGraphics.framework */; };
@@ -18,9 +19,17 @@
 		BDA9FE15161C8CBE0084EC3E /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA9FE14161C8CBE0084EC3E /* Default-568h@2x.png */; };
 		BDA9FE18161C8CBE0084EC3E /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA9FE17161C8CBE0084EC3E /* ViewController.m */; };
 		BDA9FE1B161C8CBE0084EC3E /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDA9FE19161C8CBE0084EC3E /* ViewController.xib */; };
+		BDA9FE2C161C8DAE0084EC3E /* DHLProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA9FE23161C8DAE0084EC3E /* DHLProcessor.m */; };
+		BDA9FE2D161C8DAE0084EC3E /* GenericPackageProcessor.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA9FE25161C8DAE0084EC3E /* GenericPackageProcessor.m */; };
+		BDA9FE2F161C8DAE0084EC3E /* Parcel.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA9FE29161C8DAE0084EC3E /* Parcel.m */; };
+		BDA9FE30161C8DAE0084EC3E /* Record.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA9FE2B161C8DAE0084EC3E /* Record.m */; };
+		BDA9FE36161C8F0E0084EC3E /* HTMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA9FE32161C8F0C0084EC3E /* HTMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BDA9FE37161C8F0E0084EC3E /* HTMLParser.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA9FE34161C8F0D0084EC3E /* HTMLParser.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		BDA9FE41161CA3B70084EC3E /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA9FE40161CA3B70084EC3E /* libxml2.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD78C0AA16E4FCF600ECEEF8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BDA9FDFA161C8CBD0084EC3E /* DHL Parser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DHL Parser.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDA9FDFE161C8CBD0084EC3E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		BDA9FE00161C8CBE0084EC3E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -37,6 +46,20 @@
 		BDA9FE16161C8CBE0084EC3E /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		BDA9FE17161C8CBE0084EC3E /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		BDA9FE1A161C8CBE0084EC3E /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		BDA9FE22161C8DAE0084EC3E /* DHLProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHLProcessor.h; sourceTree = "<group>"; };
+		BDA9FE23161C8DAE0084EC3E /* DHLProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHLProcessor.m; sourceTree = "<group>"; };
+		BDA9FE24161C8DAE0084EC3E /* GenericPackageProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericPackageProcessor.h; sourceTree = "<group>"; };
+		BDA9FE25161C8DAE0084EC3E /* GenericPackageProcessor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericPackageProcessor.m; sourceTree = "<group>"; };
+		BDA9FE28161C8DAE0084EC3E /* Parcel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Parcel.h; sourceTree = "<group>"; };
+		BDA9FE29161C8DAE0084EC3E /* Parcel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Parcel.m; sourceTree = "<group>"; };
+		BDA9FE2A161C8DAE0084EC3E /* Record.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Record.h; sourceTree = "<group>"; };
+		BDA9FE2B161C8DAE0084EC3E /* Record.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Record.m; sourceTree = "<group>"; };
+		BDA9FE31161C8F0C0084EC3E /* HTMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLNode.h; sourceTree = "<group>"; };
+		BDA9FE32161C8F0C0084EC3E /* HTMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLNode.m; sourceTree = "<group>"; };
+		BDA9FE33161C8F0C0084EC3E /* HTMLParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTMLParser.h; sourceTree = "<group>"; };
+		BDA9FE34161C8F0D0084EC3E /* HTMLParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTMLParser.m; sourceTree = "<group>"; };
+		BDA9FE35161C8F0D0084EC3E /* PackageProcessor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackageProcessor.h; sourceTree = "<group>"; };
+		BDA9FE40161CA3B70084EC3E /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDA9FE41161CA3B70084EC3E /* libxml2.dylib in Frameworks */,
 				BDA9FDFF161C8CBE0084EC3E /* UIKit.framework in Frameworks */,
 				BDA9FE01161C8CBE0084EC3E /* Foundation.framework in Frameworks */,
 				BDA9FE03161C8CBE0084EC3E /* CoreGraphics.framework in Frameworks */,
@@ -53,9 +77,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD610E3917F9F2A700C7F784 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				BDA9FE16161C8CBE0084EC3E /* ViewController.h */,
+				BDA9FE17161C8CBE0084EC3E /* ViewController.m */,
+				BDA9FE19161C8CBE0084EC3E /* ViewController.xib */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
 		BDA9FDEF161C8CBD0084EC3E = {
 			isa = PBXGroup;
 			children = (
+				BDA9FE40161CA3B70084EC3E /* libxml2.dylib */,
 				BDA9FE04161C8CBE0084EC3E /* DHL Parser */,
 				BDA9FDFD161C8CBD0084EC3E /* Frameworks */,
 				BDA9FDFB161C8CBD0084EC3E /* Products */,
@@ -83,11 +118,10 @@
 		BDA9FE04161C8CBE0084EC3E /* DHL Parser */ = {
 			isa = PBXGroup;
 			children = (
+				BD610E3917F9F2A700C7F784 /* UI */,
+				BDA9FE21161C8D350084EC3E /* Parser */,
 				BDA9FE0D161C8CBE0084EC3E /* AppDelegate.h */,
 				BDA9FE0E161C8CBE0084EC3E /* AppDelegate.m */,
-				BDA9FE16161C8CBE0084EC3E /* ViewController.h */,
-				BDA9FE17161C8CBE0084EC3E /* ViewController.m */,
-				BDA9FE19161C8CBE0084EC3E /* ViewController.xib */,
 				BDA9FE05161C8CBE0084EC3E /* Supporting Files */,
 			);
 			path = "DHL Parser";
@@ -103,8 +137,46 @@
 				BDA9FE10161C8CBE0084EC3E /* Default.png */,
 				BDA9FE12161C8CBE0084EC3E /* Default@2x.png */,
 				BDA9FE14161C8CBE0084EC3E /* Default-568h@2x.png */,
+				BD78C0AB16E4FCF600ECEEF8 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BDA9FE21161C8D350084EC3E /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				BDA9FE43161D0E7B0084EC3E /* DHLProcessor */,
+				BDA9FE42161D0E640084EC3E /* HTMLParser */,
+			);
+			name = Parser;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		BDA9FE42161D0E640084EC3E /* HTMLParser */ = {
+			isa = PBXGroup;
+			children = (
+				BDA9FE31161C8F0C0084EC3E /* HTMLNode.h */,
+				BDA9FE32161C8F0C0084EC3E /* HTMLNode.m */,
+				BDA9FE33161C8F0C0084EC3E /* HTMLParser.h */,
+				BDA9FE34161C8F0D0084EC3E /* HTMLParser.m */,
+			);
+			name = HTMLParser;
+			sourceTree = "<group>";
+		};
+		BDA9FE43161D0E7B0084EC3E /* DHLProcessor */ = {
+			isa = PBXGroup;
+			children = (
+				BDA9FE35161C8F0D0084EC3E /* PackageProcessor.h */,
+				BDA9FE22161C8DAE0084EC3E /* DHLProcessor.h */,
+				BDA9FE23161C8DAE0084EC3E /* DHLProcessor.m */,
+				BDA9FE24161C8DAE0084EC3E /* GenericPackageProcessor.h */,
+				BDA9FE25161C8DAE0084EC3E /* GenericPackageProcessor.m */,
+				BDA9FE28161C8DAE0084EC3E /* Parcel.h */,
+				BDA9FE29161C8DAE0084EC3E /* Parcel.m */,
+				BDA9FE2A161C8DAE0084EC3E /* Record.h */,
+				BDA9FE2B161C8DAE0084EC3E /* Record.m */,
+			);
+			name = DHLProcessor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -163,6 +235,7 @@
 				BDA9FE13161C8CBE0084EC3E /* Default@2x.png in Resources */,
 				BDA9FE15161C8CBE0084EC3E /* Default-568h@2x.png in Resources */,
 				BDA9FE1B161C8CBE0084EC3E /* ViewController.xib in Resources */,
+				BD78C0A916E4FCF600ECEEF8 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,12 +249,26 @@
 				BDA9FE0B161C8CBE0084EC3E /* main.m in Sources */,
 				BDA9FE0F161C8CBE0084EC3E /* AppDelegate.m in Sources */,
 				BDA9FE18161C8CBE0084EC3E /* ViewController.m in Sources */,
+				BDA9FE2C161C8DAE0084EC3E /* DHLProcessor.m in Sources */,
+				BDA9FE2D161C8DAE0084EC3E /* GenericPackageProcessor.m in Sources */,
+				BDA9FE2F161C8DAE0084EC3E /* Parcel.m in Sources */,
+				BDA9FE30161C8DAE0084EC3E /* Record.m in Sources */,
+				BDA9FE36161C8F0E0084EC3E /* HTMLNode.m in Sources */,
+				BDA9FE37161C8F0E0084EC3E /* HTMLParser.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		BD78C0AB16E4FCF600ECEEF8 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD78C0AA16E4FCF600ECEEF8 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		BDA9FE07161C8CBE0084EC3E /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -223,6 +310,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${SDK_DIR}/usr/include/libxml2";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 			};
@@ -243,6 +331,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "${SDK_DIR}/usr/include/libxml2";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
@@ -253,10 +342,17 @@
 		BDA9FE1F161C8CBE0084EC3E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer: Sandor Kolotenko (SXRXR74T8W)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Sandor Kolotenko (SXRXR74T8W)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DHL Parser/DHL Parser-Prefix.pch";
 				INFOPLIST_FILE = "DHL Parser/DHL Parser-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/DHL Parser\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "51CDCED5-66D1-4955-B200-BF6BC1711658";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "51CDCED5-66D1-4955-B200-BF6BC1711658";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) /usr/include/libxml2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -267,7 +363,10 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DHL Parser/DHL Parser-Prefix.pch";
 				INFOPLIST_FILE = "DHL Parser/DHL Parser-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				LIBRARY_SEARCH_PATHS = "\"$(SRCROOT)/DHL Parser\"";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(inherited) /usr/include/libxml2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -291,6 +390,7 @@
 				BDA9FE20161C8CBE0084EC3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

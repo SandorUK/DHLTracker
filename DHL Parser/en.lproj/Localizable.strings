@@ -1,0 +1,11 @@
+/* 
+  Localizable.strings
+  DHL Parser
+
+  Created by Sandor Kolotenko on 2013.03.04..
+  Copyright (c) 2013 Sandor Kolotenko. All rights reserved.
+*/
+
+"DHLNoSuchParcel"   =   "No Such Parcel";
+"N/A"               =   "N/A";
+"DHLTimeout"        =   "Timeout has occured";
