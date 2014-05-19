@@ -1,9 +1,9 @@
 //
 //  DPDProcessor.m
-//  Postakocsi
+//  
 //
 //  Created by Sandor Kolotenko on 03/03/2012.
-//  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
+//  Copyright (c) 2012 Sandor Kolotenko. All rights reserved.
 //
 
 #import "Record.h"
@@ -15,7 +15,10 @@
 
 - (id) init
 {
-    //For internal reference only. Use as you wish.
+    // For internal reference only. Use as you wish.
+    // Originally this DHLProcessor class was a part of a larger app (including
+    // FedEx and Hungarian Post), these ID's required for compatibility reasons
+    // You may remove them.
     name = @"DHL";
     serviceID = 2;
     return self;

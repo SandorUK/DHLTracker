@@ -1,6 +1,8 @@
 DHLTracker
 ==========
 
+*Warning! Lots of legacy code! Update and transition to cocoapods is coming!*
+
 This is a DHL server response parser written in Objective-C. It parses tracking information for parcels by connecting to the official DHL HTML based API and parsing the response, converting it into the object model (Parcel is an object with various properties), which can be used within various tracking and business applications for iOS or even Mac OS.
 
 Features: 
