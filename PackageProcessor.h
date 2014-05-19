@@ -18,5 +18,5 @@
 - (void)getParcelBy:(NSString*)TrackingNumber;
 - (BOOL)isServiceAvailable;
 
-@property (nonatomic, copy) void (^completeBlock)(BOOL isSuccess, NSString *message, Parcel *parcel);
+@property (nonatomic, copy) void (^completeBlock)(Parcel *parcel, NSError** error);
 @end

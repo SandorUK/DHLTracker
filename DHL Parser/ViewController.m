@@ -91,15 +91,16 @@
 
 -(IBAction)trackParcel:(id)sender{
     [self.txtTrackingNumber resignFirstResponder];
-    [dhl setCompleteBlock:^(BOOL isSuccess, NSString *message, Parcel *parcel) {
+    
+    [dhl setCompleteBlock:^(Parcel *parcel, NSError **error) {
         // BOOL isSuccess represents whether communication with DHL server was successful
         // NSString *message containt a 
-        if (isSuccess) {
+        if (!parcel) {
             [delegate.Parcels addObject:parcel];
             [self.tableView reloadData];
         }
         else{
-            [delegate parcelErrorOccured:message];
+            [delegate parcelErrorOccured:(*error).localizedDescription];
         }
     }];
     [dhl getParcelBy:self.txtTrackingNumber.text];

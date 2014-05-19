@@ -28,6 +28,7 @@
 //Flag for your internal reference.
 - (BOOL)isServiceAvailable
 {
+    // TODO: Implement HTTP request check for the server
     return YES;
 }
 
@@ -184,6 +185,7 @@
         }
         @catch (NSException *exception) {
             NSLog(@"Cell Text Parsing error\nText to parse:%@\nParsing error %@", rawText, exception.debugDescription);
+            
         }
     }
     return fullResult;
@@ -252,30 +254,53 @@
 //Data has arrived. Let's start parsing.
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection
 {
-    NSLog(@"Response handling");
-    NSLog(@"PACKAGE size %i ", [responseData length]);
+    NSError *error;
+    NSMutableDictionary *details = [[NSMutableDictionary alloc] init];
     
     Parcel* package = [self getDetails:responseData];
-    NSLog(@"Package records count %i", [package.TrackingRecords count]);
-    NSLog(@"Last known status: %@", package.LastKnownStatus);
-    
     
     if (package.IsTracked) {
         NSLog(@"DHL parcel %@", package.TrackingNumber);
         
-        self.completeBlock(YES, [NSString stringWithFormat:@"DHL parcel %@", package.TrackingNumber], package);
+        self.completeBlock(package, nil);
     }
     else {
         //Callback so you can notify user if an exception occurs.
-        self.completeBlock(NO, NSLocalizedString(@"DHLNoSuchParcel", @"DHLNoParcel"), Nil);
+        error = [NSError errorWithDomain:DHLErrorDomain
+                                    code:DHLNoSuchParcelError
+                                userInfo:details];
+        [details setObject:NSLocalizedString(@"DHLNoSuchParcel", @"DHLNoParcel")
+                    forKey:NSLocalizedDescriptionKey];
+        
+        self.completeBlock(nil, &error);
         
     }
 }
 
 - (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
 {
-    NSLog(@"Error %@", error.debugDescription);
-    self.completeBlock(NO, NSLocalizedString(@"DHLTimeout", @"Timeout"), Nil);
+    NSError *errorOut;
+    NSMutableDictionary *details = [[NSMutableDictionary alloc] init];
+    
+    
+    if (error.code == NSURLErrorTimedOut) {
+        errorOut = [NSError errorWithDomain:DHLErrorDomain
+                                    code:DHLTimeoutError
+                                userInfo:details];
+        [details setObject:NSLocalizedString(@"DHLTimeout", @"DHLTimeout")
+                    forKey:NSLocalizedDescriptionKey];
+
+    }
+    else{
+        errorOut = [NSError errorWithDomain:DHLErrorDomain
+                                    code:DHLConnectionError
+                                userInfo:details];
+        [details setObject:NSLocalizedString(@"DHLConnectionError", @"DHLConnectionError")
+                    forKey:NSLocalizedDescriptionKey];
+        [details setObject:error forKey:NSUnderlyingErrorKey];
+    }
+    
+    self.completeBlock(nil, &errorOut);
 }
 
 - (NSString*)parseLocation:(NSString *)place
